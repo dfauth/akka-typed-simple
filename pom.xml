@@ -15,9 +15,20 @@
     <maven.compiler.source>11</maven.compiler.source>
     <maven.compiler.target>11</maven.compiler.target>
     <akka.version>2.6.12</akka.version>
+    <kafaktor.version>1.0-SNAPSHOT</kafaktor.version>
   </properties>
 
   <dependencies>
+    <dependency>
+      <groupId>com.github.dfauth.kafaktor</groupId>
+      <artifactId>kafka</artifactId>
+      <version>${kafaktor.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.github.dfauth.kafaktor</groupId>
+      <artifactId>actor-kafka</artifactId>
+      <version>${kafaktor.version}</version>
+    </dependency>
     <dependency>
       <groupId>com.typesafe.akka</groupId>
       <artifactId>akka-actor-typed_2.13</artifactId>

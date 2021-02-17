@@ -24,7 +24,7 @@ public class TestCase {
 
     private static final Logger logger = LoggerFactory.getLogger(TestCase.class);
     static final ActorTestKit testKit = ActorTestKit.create();
-    private Config config = ConfigFactory.load();
+    private Config config = ConfigFactory.load().withFallback(ConfigFactory.load("application.conf"));
     private Props props = MailboxSelector.fromConfig("blah.bablah.mailbox").withDispatcherFromConfig("blah.bablah.dispatcher");
 
     @org.junit.jupiter.api.AfterAll
